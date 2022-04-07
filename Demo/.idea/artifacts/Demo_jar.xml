@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Demo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Demo_jar</output-path>
+    <root id="archive" name="Demo.jar">
+      <element id="module-output" name="Demo" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/fastjson-1.2.75.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
