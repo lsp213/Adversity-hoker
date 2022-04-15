@@ -9,6 +9,7 @@
 using namespace std;
 double* s;
 #define PI 3.14159265353
+#pragma execution_character_set("utf-8")
 QtGuiFileTest::QtGuiFileTest(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -74,9 +75,21 @@ void QtGuiFileTest::OpenDataFile(bool)
 	//显示缓冲区数据
 	ostringstream os;
 	ui.textBrowser->clear();
+	string dat;
+	dat =to_string(sampleRate);
+	QString str = "采样频率为:";
+	str = str+ QString::fromStdString(dat) + "\n";
+	ui.textBrowser->insertPlainText(str);
+	dat = to_string(data_num_line);
+	str = "每行样本数为:";
+	str = str + QString::fromStdString(dat) + "\n";
+	ui.textBrowser->insertPlainText(str);
+	dat = "uint32";
+	str = "数据类型为:";
+	str = str + QString::fromStdString(dat) + "\n";
+	ui.textBrowser->insertPlainText(str);
 	for (int i = 0; i < datalen; i++)
 	{
-		string dat;
 		switch (datadtype)
 		{
 		case 0:    dat = to_string(int_database[i]); break; //分配32位有符号整数
@@ -90,6 +103,11 @@ void QtGuiFileTest::OpenDataFile(bool)
 		//os << dat <<"\n";
 		ui.textBrowser->insertPlainText(QString::fromStdString(dat));
 	}
+	for (int i = 0; i < datalen; i++)
+	{
+		dataBuf[i] = uint_database[i] /60* 1.0;
+	}
+	update();
 }
 
 
@@ -122,6 +140,8 @@ void QtGuiFileTest::FreAnalysis(bool)
 			data[i].imag = 0.0;
 		}
 		s = FFT(data);
+		QString str = "主要频率为:\n";
+		ui.textBrowser->insertPlainText(str);
 		for (i = 0; i < 1024; i++)
 		{
 			dataBuf[i] = -1 * s[i] / 1000.0;
