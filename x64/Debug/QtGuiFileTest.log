@@ -1,3 +1,13 @@
 ﻿  Reading Qt configuration (D:/Qt1/5.12.3/msvc2017_64/bin/qmake)
+  uic QtGuiFileTest.ui
+  rcc QtGuiFileTest.qrc
+  moc QtGuiFileTest.h
+   RCC: Warning: No resources in 'D:\vs\filetest1\QtGuiFileTest\QtGuiFileTest.qrc'.
+  Fft.cpp
+  Fft.h
+  main.cpp
   QtGuiFileTest.cpp
+  qrc_QtGuiFileTest.cpp
+  moc_QtGuiFileTest.cpp
+x64\Debug\Fft.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
   QtGuiFileTest.vcxproj -> D:\vs\filetest1\QtGuiFileTest\x64\Debug\QtGuiFileTest.exe

@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -29,11 +28,10 @@ public:
     QWidget *centralWidget;
     QLabel *result;
     QTextBrowser *textBrowser;
-    QWidget *horizontalLayoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *pushButtonOpen;
-    QPushButton *pushButtonBin;
-    QPushButton *pushButtonText;
+    QPushButton *timeFre;
+    QPushButton *addNoise;
+    QPushButton *filtering;
+    QPushButton *openFile;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -47,33 +45,22 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         result = new QLabel(centralWidget);
         result->setObjectName(QString::fromUtf8("result"));
-        result->setGeometry(QRect(50, 120, 91, 31));
+        result->setGeometry(QRect(20, 130, 91, 31));
         textBrowser = new QTextBrowser(centralWidget);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(50, 150, 461, 351));
-        horizontalLayoutWidget = new QWidget(centralWidget);
-        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(50, 20, 461, 101));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButtonOpen = new QPushButton(horizontalLayoutWidget);
-        pushButtonOpen->setObjectName(QString::fromUtf8("pushButtonOpen"));
-
-        horizontalLayout->addWidget(pushButtonOpen);
-
-        pushButtonBin = new QPushButton(horizontalLayoutWidget);
-        pushButtonBin->setObjectName(QString::fromUtf8("pushButtonBin"));
-
-        horizontalLayout->addWidget(pushButtonBin);
-
-        pushButtonText = new QPushButton(horizontalLayoutWidget);
-        pushButtonText->setObjectName(QString::fromUtf8("pushButtonText"));
-
-        horizontalLayout->addWidget(pushButtonText);
-
+        textBrowser->setGeometry(QRect(20, 170, 461, 351));
+        timeFre = new QPushButton(centralWidget);
+        timeFre->setObjectName(QString::fromUtf8("timeFre"));
+        timeFre->setGeometry(QRect(790, 20, 93, 28));
+        addNoise = new QPushButton(centralWidget);
+        addNoise->setObjectName(QString::fromUtf8("addNoise"));
+        addNoise->setGeometry(QRect(530, 20, 93, 28));
+        filtering = new QPushButton(centralWidget);
+        filtering->setObjectName(QString::fromUtf8("filtering"));
+        filtering->setGeometry(QRect(530, 70, 93, 28));
+        openFile = new QPushButton(centralWidget);
+        openFile->setObjectName(QString::fromUtf8("openFile"));
+        openFile->setGeometry(QRect(40, 20, 93, 28));
         QtGuiFileTestClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(QtGuiFileTestClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -95,9 +82,10 @@ public:
     {
         QtGuiFileTestClass->setWindowTitle(QApplication::translate("QtGuiFileTestClass", "QtGuiFileTest", nullptr));
         result->setText(QApplication::translate("QtGuiFileTestClass", "\347\274\223\345\206\262\345\214\272", nullptr));
-        pushButtonOpen->setText(QApplication::translate("QtGuiFileTestClass", "\346\211\223\345\274\200\346\226\207\344\273\266", nullptr));
-        pushButtonBin->setText(QApplication::translate("QtGuiFileTestClass", "\344\272\214\350\277\233\345\210\266\346\226\207\344\273\266", nullptr));
-        pushButtonText->setText(QApplication::translate("QtGuiFileTestClass", "\346\226\207\346\234\254\346\226\207\344\273\266", nullptr));
+        timeFre->setText(QApplication::translate("QtGuiFileTestClass", "\346\227\266\351\242\221\345\210\207\346\215\242", nullptr));
+        addNoise->setText(QApplication::translate("QtGuiFileTestClass", "\345\212\240\345\231\252", nullptr));
+        filtering->setText(QApplication::translate("QtGuiFileTestClass", "\346\273\244\346\263\242", nullptr));
+        openFile->setText(QApplication::translate("QtGuiFileTestClass", "\344\277\241\345\217\267\350\276\223\345\205\245", nullptr));
     } // retranslateUi
 
 };

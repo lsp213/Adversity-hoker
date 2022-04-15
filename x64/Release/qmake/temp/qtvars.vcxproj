@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\vs\filetest\QtGuiFileTest\x64\Release\qmake\temp;D:\Qt1\5.12.3\msvc2017_64\include;D:\Qt1\5.12.3\msvc2017_64\include\QtWidgets;D:\Qt1\5.12.3\msvc2017_64\include\QtGui;D:\Qt1\5.12.3\msvc2017_64\include\QtANGLE;D:\Qt1\5.12.3\msvc2017_64\include\QtCore;D:\vs\filetest\QtGuiFileTest\x64\Release\qmake\temp;C:\VulkanSDK\1.0.51.0\include;D:\Qt1\5.12.3\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vs\filetest1\QtGuiFileTest\x64\Release\qmake\temp;D:\Qt1\5.12.3\msvc2017_64\include;D:\Qt1\5.12.3\msvc2017_64\include\QtWidgets;D:\Qt1\5.12.3\msvc2017_64\include\QtGui;D:\Qt1\5.12.3\msvc2017_64\include\QtANGLE;D:\Qt1\5.12.3\msvc2017_64\include\QtCore;D:\vs\filetest1\QtGuiFileTest\x64\Release\qmake\temp;C:\VulkanSDK\1.0.51.0\include;D:\Qt1\5.12.3\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>.\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>

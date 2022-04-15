@@ -84,7 +84,12 @@ void QtGuiFileTest::OpenDataFile(bool)
 	str = "每行样本数为:";
 	str = str + QString::fromStdString(dat) + "\n";
 	ui.textBrowser->insertPlainText(str);
-	dat = "uint32";
+	if (datadtype == 1)
+		dat = "uint32";
+	else if (datadtype == 0)
+		dat = "int32";
+	else
+		dat = "float";
 	str = "数据类型为:";
 	str = str + QString::fromStdString(dat) + "\n";
 	ui.textBrowser->insertPlainText(str);
